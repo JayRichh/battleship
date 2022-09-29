@@ -11,7 +11,7 @@ export default function load() {
   container.appendChild(buttonsDOM);
   container.appendChild(winnerDOM);
 
-  const player = Player('Carlos', false);
+  const player = Player('Player', false);
   const computer = Player('Computer', true);
   player.grid = gPlayer;
   computer.grid = gEnemy;
