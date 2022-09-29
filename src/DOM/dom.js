@@ -17,7 +17,7 @@ function boats() {
 
 function createButtons() {
   const row = createDiv(['row']);
-  const col = createDiv(['col-md-3']);
+  const col = createDiv(['col-md-5']);
   const startBtn = createElem('button', '', ['btn', 'btn-primary']);
   startBtn.innerText = 'New Game';
 
@@ -26,11 +26,11 @@ function createButtons() {
 
   const div = createDiv(['wrapper']);
   const createp1 = createElem('p', '', ['red']);
-  createp1.innerText = 'Hitted';
+  createp1.innerText = 'Hit';
   div.appendChild(createp1);
 
   const createp2 = createElem('p', '', ['blue']);
-  createp2.innerText = 'Missed';
+  createp2.innerText = 'Miss';
   div.appendChild(createp2);
   row.appendChild(div);
   return { row, startBtn };
@@ -67,7 +67,7 @@ function createDOMBoard() {
   const row = createDiv(['row', 'justify-content-md-center']);
 
   const leftCol = createDiv(['col-']);
-  const { title: gPTitle, head: pTitle } = createGridTitle('Player 1');
+  const { title: gPTitle, head: pTitle } = createGridTitle('Player');
   const gPlayer = createGrid('player-grid');
   leftCol.appendChild(gPTitle);
   leftCol.appendChild(gPlayer);

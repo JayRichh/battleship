@@ -1,15 +1,16 @@
-@import "../node_modules/bootstrap/scss/bootstrap";
+@import "~bootstrap/scss/bootstrap";
 
-body{
-  background: url('./img/background.jpg');
-  background-size:cover;
+body {
+  background: url('./img/background.jpg') no-repeat center center fixed;
+  background-size: cover;
 }
 
-h1{
+h1 {
   font-family: 'Press Start 2P', cursive;
-  color:red;
+  color: rgb(85, 85, 85);
   font-weight: 900;
   text-align: center;
+  padding: 20px;
 }
 
 .grid-item {
@@ -20,24 +21,55 @@ h1{
   height: 35px;
 }
 
-.row{
+.row {
   background-color: rgba(255, 255, 255, 0.5);
 }
 
+.container {
+  .col-md-5 {
+    // div to center button
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+  }
+
+  >.row {
+    > :nth-child(1) {
+      max-width: 360px;
+    }
+
+    > :nth-child(3) {
+      max-width: 360px;
+    }
+  }
+}
 
 .hitted {
   background-color: red;
 }
+
 .missed {
-  background:url('./img/wave.png');
   background-size: contain;
-  background-color:blue;
+  background-color: blue;
 }
 
 .grid {
   width: 360px;
+
   div {
     height: 36px;
+  }
+}
+
+.enemy-grid {
+  div {
+    div {
+      // not with the class hitted or missed & hover
+      &:not(.hitted):not(.missed):hover {
+        background-color: rgba(0, 0, 0, 0.2);
+      }
+    }
   }
 }
 
@@ -50,7 +82,8 @@ button {
 }
 
 .wrapper {
-  margin-left: 60%;
+  margin-left: 80%;
+
   p:before {
     content: '';
     display: inline-block;
@@ -58,11 +91,12 @@ button {
     height: 15px;
     margin-right: 5px;
   }
+
   .blue:before {
     background-color: Blue;
-    background-image:url(./img/wave.png);
     background-size: contain;
   }
+
   .red:before {
     background: red;
   }
@@ -96,6 +130,7 @@ button {
   background-position: center;
   background-repeat: no-repeat;
 }
+
 .battleship {
   background-image: url('./img/battleship.png');
   margin-top: 140px;
@@ -104,9 +139,11 @@ button {
 .carrier {
   background-image: url('./img/carrier.png');
 }
+
 .submarine {
   background-image: url('./img/submarine.png');
 }
+
 .destroyer {
   background-image: url('./img/cruiser.png');
 }
@@ -125,12 +162,14 @@ button {
   background-size: 140px;
   background-position-y: 4px;
 }
+
 $ship-size: 32px;
 $ship-loc-x: -6px;
 
 .battleship-sea-1 {
   background-position-x: $ship-loc-x;
 }
+
 .battleship-sea-2 {
   background-position-x: -$ship-size * 1 + $ship-loc-x;
 }
@@ -153,6 +192,7 @@ $ship-loc-x: -6px;
 .carrier-sea-1 {
   background-position-x: $ship-loc-x;
 }
+
 .carrier-sea-2 {
   background-position-x: -$ship-size * 1 + $ship-loc-x;
 }
@@ -164,12 +204,14 @@ $ship-loc-x: -6px;
 .carrier-sea-4 {
   background-position-x: -$ship-size * 3 + $ship-loc-x;
 }
+
 .carrier-sea-5 {
   background-position-x: -$ship-size * 4 + $ship-loc-x;
 }
 
 // Submarine
 $ship-loc-x: -17px;
+
 .submarine-sea {
   background-image: url('./img/submarine.png');
   background-size: 125px;
@@ -179,6 +221,7 @@ $ship-loc-x: -17px;
 .submarine-sea-1 {
   background-position-x: $ship-loc-x;
 }
+
 .submarine-sea-2 {
   background-position-x: -$ship-size * 1 + $ship-loc-x;
 }
@@ -189,6 +232,7 @@ $ship-loc-x: -17px;
 
 // Cruiser
 $ship-loc-x: 0px;
+
 .cruiser-sea {
   background-image: url('./img/cruiser.png');
   background-size: 100px;
@@ -198,6 +242,7 @@ $ship-loc-x: 0px;
 .cruiser-sea-1 {
   background-position-x: $ship-loc-x;
 }
+
 .cruiser-sea-2 {
   background-position-x: -$ship-size * 1 + $ship-loc-x;
 }
@@ -218,6 +263,7 @@ $ship-loc-x: 5px;
 .patrolBoat-sea-1 {
   background-position-x: $ship-loc-x;
 }
+
 .patrolBoat-sea-2 {
   background-position-x: -$ship-size * 1 + $ship-loc-x;
 }
@@ -235,12 +281,14 @@ $ship-loc-x: 5px;
   background-size: 140px;
   background-position-y: 4px;
 }
+
 $ship-size: 32px;
 $ship-loc-x: -6px;
 
 .battleship-sea-v-1 {
   background-position-x: $ship-loc-x;
 }
+
 .battleship-sea-v-2 {
   background-position-x: $ship-size * 3 + $ship-loc-x;
 }
@@ -264,6 +312,7 @@ $ship-loc-x: -6px;
 .carrier-sea-v-1 {
   background-position-x: $ship-loc-x;
 }
+
 .carrier-sea-v-2 {
   background-position-x: $ship-size * 4 + $ship-loc-x;
 }
@@ -275,6 +324,7 @@ $ship-loc-x: -6px;
 .carrier-sea-v-4 {
   background-position-x: $ship-size * 2 + $ship-loc-x;
 }
+
 .carrier-sea-v-5 {
   background-position-x: $ship-size * 1;
 }
@@ -282,6 +332,7 @@ $ship-loc-x: -6px;
 //Submarine V
 
 $ship-loc-x: -17px;
+
 .submarine-sea-v {
   background-image: url('./img/submarine.png');
   background-size: 125px;
@@ -292,6 +343,7 @@ $ship-loc-x: -17px;
 .submarine-sea-v-1 {
   background-position-x: $ship-loc-x;
 }
+
 .submarine-sea-v-2 {
   background-position-x: $ship-size * 2;
 }
@@ -302,6 +354,7 @@ $ship-loc-x: -17px;
 
 // Cruisier
 $ship-loc-x: 0px;
+
 .cruiser-sea-v {
   background-image: url('./img/cruiser.png');
   background-size: 100px;
@@ -312,6 +365,7 @@ $ship-loc-x: 0px;
 .cruiser-sea-v-1 {
   background-position-x: $ship-loc-x;
 }
+
 .cruiser-sea-v-2 {
   background-position-x: -$ship-size * 1 + $ship-loc-x;
 }
@@ -331,6 +385,7 @@ $ship-loc-x: 0px;
 .patrolBoat-sea-v-1 {
   background-position-x: $ship-loc-x;
 }
+
 .patrolBoat-sea-v-2 {
   background-position-x: -$ship-size * 1 + $ship-loc-x;
 }
