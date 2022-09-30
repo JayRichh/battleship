@@ -20,7 +20,7 @@
   * Git and GitHub
   * Webpack
   * NPM
-  * SASS
+  * Scss
   * Jest Test Suite
  
  Learning more about OOP and Test Driven Development
