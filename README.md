@@ -5,7 +5,7 @@
 
 [Check out a live version here](https://jayrichh.github.io/battleship/)
 
-![battleship img](https://imgur.com/mvWnDq5)
+![battleship img](https://i.imgur.com/mvWnDq5)
 
 ## Overview
 
