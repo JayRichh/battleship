@@ -5,7 +5,7 @@
 
 [Check out a live version here](https://jayrichh.github.io/battleship/)
 
-![battleship_github](https://user-images.githubusercontent.com/18374849/193420065-97f9aa2f-9542-49e7-b1e4-239351ddb04c.png)
+![battleship_image](https://user-images.githubusercontent.com/18374849/194077458-e9c6236c-237c-4b16-a3d3-e5240dd023c6.png)
 
 ## Overview
 
