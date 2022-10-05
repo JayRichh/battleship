@@ -2,13 +2,19 @@
 
 body {
   background: url('./img/background.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   background-size: cover;
+  overflow-x: hidden;
 }
 
 h1 {
-  font-family: 'Press Start 2P', cursive;
-  color: rgb(85, 85, 85);
-  font-weight: 900;
+  // large spaced title font
+  font-family: 'Lobster', cursive;
+  font-size: 5em;
+  letter-spacing: 0.1em;
+  color: rgb(13, 62, 55);
   text-align: center;
   padding: 20px;
 }
@@ -26,6 +32,8 @@ h1 {
 }
 
 .container {
+  backdrop-filter: blur(5px);
+
   .col-md-5 {
     // div to center button
     display: flex;
@@ -35,6 +43,10 @@ h1 {
   }
 
   >.row {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
     > :nth-child(1) {
       max-width: 360px;
     }
@@ -45,7 +57,7 @@ h1 {
   }
 }
 
-.hitted {
+.hit {
   background-color: red;
 }
 
@@ -58,15 +70,15 @@ h1 {
   width: 360px;
 
   div {
-    height: 36px;
+    height: 35px;
   }
 }
 
 .enemy-grid {
   div {
     div {
-      // not with the class hitted or missed & hover
-      &:not(.hitted):not(.missed):hover {
+      // not with the class hit or missed & hover
+      &:not(.hit):not(.missed):hover {
         background-color: rgba(0, 0, 0, 0.2);
       }
     }
@@ -82,7 +94,8 @@ button {
 }
 
 .wrapper {
-  margin-left: 80%;
+  width: 200px;
+  margin: 15px 0px 0px 55px;
 
   p:before {
     content: '';
@@ -125,7 +138,7 @@ button {
 
 .ship {
   height: 40px;
-  max-width: 100px;
+  max-width: 160px;
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;

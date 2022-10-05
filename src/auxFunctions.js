@@ -28,7 +28,7 @@ const randomShip = () => {
 
 function fireBoard(x, y, grid, hit) {
   if (hit) {
-    grid.children[y].children[x].classList.add('hitted');
+    grid.children[y].children[x].classList.add('hit');
   } else {
     grid.children[y].children[x].classList.add('missed');
   }

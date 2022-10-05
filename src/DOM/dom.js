@@ -73,15 +73,14 @@ function createDOMBoard() {
   leftCol.appendChild(gPlayer);
 
   const rightCol = createDiv(['col-']);
-  const { title: gETitle, head: eTitle } = createGridTitle('Enemy (Computer)');
+  const { title: gETitle, head: eTitle } = createGridTitle('Computer');
   const gEnemy = createGrid('enemy-grid');
   rightCol.appendChild(gETitle);
   rightCol.appendChild(gEnemy);
 
   row.appendChild(leftCol);
-  row.appendChild(createDiv(['col-1']));
-  row.appendChild(rightCol);
   row.appendChild(boats());
+  row.appendChild(rightCol);
 
   return { row, gPlayer, gEnemy, pTitle, eTitle };
 }
